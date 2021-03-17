@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from 'react';
+import { Layout } from './components/layout/Layout';
+import { MainContext } from './context/MainContext';
+import { useStorage } from './hooks/useStorage';
+import { Routes } from './routes/Routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// import { ReactMegaMenu } from './libs/mega-menu/mega-menu';
+/* <ReactMegaMenu tolerance={50} direction='LEFT' data={[{ label: 'test 1', key: 1, items: <p>Hello</p> }]} /> */
 
-export default App;
+export const App: FC = () => {
+	const [menuData, setMenuData] = useStorage();
+
+	const data = {
+		menuData,
+		setMenuData,
+	};
+
+	return (
+		menuData && (
+			<MainContext.Provider value={data}>
+				<Layout>
+					<Routes />
+				</Layout>
+			</MainContext.Provider>
+		)
+	);
+};

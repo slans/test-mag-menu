@@ -1,0 +1,12 @@
+.pageNav {
+	display: flex;
+}
+.pageNavLink {
+	display: block;
+}
+.pageNavLink:not(:first-child) {
+	margin-left: 10px;
+}
+.pageNavLinkActive {
+	color: red;
+}
