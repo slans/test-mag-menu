@@ -1,5 +1,6 @@
 .pageNav {
 	display: flex;
+	margin: 15px;
 }
 .pageNavLink {
 	display: block;

@@ -3,7 +3,7 @@ import { MainContext } from '../../../context/MainContext';
 import { ReactMegaMenu } from '../../../libs/mega-menu/mega-menu';
 import { styleConfig } from '../style-config';
 import { SubMenuContent } from '../sub-menu-content/SubMenuContent';
-import styles from './mainMenu.module.css';
+import styles from './mainMenu.module.scss';
 
 export const MainMenu = () => {
 	const { menuData } = useContext(MainContext);
@@ -32,8 +32,8 @@ export const MainMenu = () => {
 		menuData.length && (
 			<div className={styles.mainMenu}>
 				{menuData.map((item: any) => (
-					<div className={styles.menuItem}>
-						<span className='dropdownLink'>{item.label}</span>
+					<div className={styles.menuItem} key={item.id}>
+						<span className={styles.dropdownLink}>{item.label}</span>
 						{item.subMenu.length && (
 							<div className={styles.dropdownContent}>
 								<ReactMegaMenu data={transformMenuData(item.subMenu)} styleConfig={styleConfig} />

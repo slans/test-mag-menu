@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import styles from './styles.module.scss';
 
 interface SubMenuContentProps {
 	navData?: any;
@@ -8,16 +9,16 @@ interface SubMenuContentProps {
 export const SubMenuContent: FC<SubMenuContentProps> = ({ navData, empty }) => {
 	if (navData && navData.length) {
 		return (
-			<div className='subMenuContent'>
+			<div className={styles.subMenuContent}>
 				{navData.map((item: any) => {
 					return (
-						<div className='navBox' key={item.id}>
-							<div className='title'>{item.label}</div>
+						<div className={styles.navBox} key={item.id}>
+							<div className={styles.navBoxTitle}>{item.label}</div>
 							{item.navLinks.map((linkItem: any) => {
 								return (
-									<span key={linkItem.id} className='link'>
-										{linkItem.label}
-									</span>
+									<div key={linkItem.id} className={styles.linkHolder}>
+										<span>{linkItem.label}</span>
+									</div>
 								);
 							})}
 						</div>

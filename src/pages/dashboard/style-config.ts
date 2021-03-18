@@ -21,6 +21,7 @@ export const styleConfig = {
 			borderTop: '2px solid blue',
 			borderRight: '1px solid rgba(34, 36, 38, 0.15)',
 			borderBottom: '1px solid rgba(34, 36, 38, 0.15)',
+			background: '#fff',
 		},
 	},
 	menuItemProps: {

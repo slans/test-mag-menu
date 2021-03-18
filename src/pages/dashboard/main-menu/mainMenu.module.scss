@@ -1,0 +1,30 @@
+.mainMenu {
+	display: flex;
+	margin-top: 10px;
+}
+.menuItem {
+	position: relative;
+	padding-bottom: 15px;
+	cursor: pointer;
+	.dropdownLink {
+		text-decoration: underline;
+	}
+	&:hover {
+		.dropdownLink {
+			color: rgb(97, 97, 255);
+			text-decoration: none;
+		}
+		.dropdownContent {
+			display: block;
+		}
+	}
+}
+.menuItem:not(:first-child) {
+	margin-left: 20px;
+}
+.dropdownContent {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 25px;
+}

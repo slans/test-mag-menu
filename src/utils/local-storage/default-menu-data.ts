@@ -5,7 +5,7 @@ const defaultMenuData = [
 		subMenu: [
 			{
 				id: '1.1',
-				label: 'Sub Menu Item  1',
+				label: 'Sub Menu Item  1.1',
 				subMenuItems: [
 					{
 						id: '1.1.1',
@@ -49,7 +49,7 @@ const defaultMenuData = [
 		subMenu: [
 			{
 				id: '2.1',
-				label: 'Sub Menu Item  2',
+				label: 'Sub Menu Item  2.1',
 				subMenuItems: [
 					{
 						id: '2.1.1',

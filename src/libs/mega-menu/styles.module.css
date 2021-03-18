@@ -1,18 +1,19 @@
 .flex {
-    display: 'flex'
+	display: flex;
 }
 .flexLEFT {
-    flex-direction: 'row-reverse'
+	flex-direction: row-reverse;
 }
 .flexRIGHT {
-    flex-direction: 'row'
+	flex-direction: row;
 }
-.menu,
+.menu {
+	position: absolute;
+}
 .contentSubMenu {
-    position: absolute;
+	position: relative;
 }
 .menuUl {
-    list-style: 'none';
-    padding-left: 0;    
+	list-style: none;
+	padding-left: 0;
 }
-
