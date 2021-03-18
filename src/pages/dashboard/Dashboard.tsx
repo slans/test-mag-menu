@@ -1,8 +1,5 @@
-import React, { useContext } from 'react';
-import { MainContext } from '../../context/MainContext';
-import { ReactMegaMenu } from '../../libs/mega-menu/mega-menu';
-import { styleConfig } from './style-config';
-import { SubMenuContent } from './sub-menu-content/SubMenuContent';
+import React from 'react';
+import { MainMenu } from './main-menu/MainMenu';
 
 export const Dashboard = () => {
 	return (
@@ -11,6 +8,4 @@ export const Dashboard = () => {
 			<h1 className='pageTitle'>Dashboard page</h1>
 		</>
 	);
-
-	return <ReactMegaMenu data={[{ label: 'test 1', key: 1, items: <p>Hello</p> }]} styleConfig={styleConfig} />;
 };
