@@ -1,5 +1,4 @@
-import React, { ChangeEvent, FC, SyntheticEvent, useContext, useState } from 'react';
-import { MainContext } from '../../context/MainContext';
+import React, { FC } from 'react';
 import { Main } from './main/Main';
 import { Sidebar } from './sidebar/Sidebar';
 import styles from './styles.module.scss';

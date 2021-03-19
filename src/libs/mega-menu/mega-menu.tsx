@@ -208,16 +208,12 @@ export class ReactMegaMenu extends React.Component<Props, State> {
 		switch (this.props.direction) {
 			case 'LEFT':
 			default:
-				{
-					decreasingCorner = lowerRight;
-					increasingCorner = upperRight;
-				}
+				decreasingCorner = lowerRight;
+				increasingCorner = upperRight;
 				break;
 			case 'RIGHT':
-				{
-					decreasingCorner = upperLeft;
-					increasingCorner = lowerLeft;
-				}
+				decreasingCorner = upperLeft;
+				increasingCorner = lowerLeft;
 				break;
 		}
 

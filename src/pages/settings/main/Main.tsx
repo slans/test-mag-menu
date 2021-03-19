@@ -1,6 +1,5 @@
 import React, { ChangeEvent, SyntheticEvent, useContext, useState } from 'react';
 import { MainContext } from '../../../context/MainContext';
-import { storageIterator } from '../../../utils/local-storage/local-storage';
 import { createNewMenuData, updateMenuData } from '../../../utils/utils';
 import styles from './styles.module.scss';
 
